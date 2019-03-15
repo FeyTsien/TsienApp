@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/app_toolbar" />
+
+    <!-- 具体内容 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/rl_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50">
+
+            <TextView
+                android:id="@+id/tv_phone_info"
+                style="@style/me_alter_phone_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/setting_alter_phone_text" />
+        </RelativeLayout>
+
+        <!-- 手机号内容 -->
+        <RelativeLayout
+            android:id="@+id/rl_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70"
+            android:layout_below="@+id/rl_text"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_text1"
+                style="@style/me_edit_text_1_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/phone_number" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                style="@style/me_edit_text_2_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_below="@+id/tv_text1"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@null"
+                android:hint="@string/please_enter_phone_number"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textColorHint="@color/orange" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/rl_phone"
+            android:background="@color/me_divider" />
+
+        <!-- 验证码内容 -->
+        <RelativeLayout
+            android:id="@+id/rl_verify_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70"
+            android:layout_below="@+id/divider">
+
+            <TextView
+                android:id="@+id/tv_verify"
+                style="@style/me_edit_text_1_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/verification_code" />
+
+            <EditText
+                android:id="@+id/et_sms_code"
+                style="@style/me_edit_text_2_style"
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="@dimen/dp_30"
+                android:layout_below="@+id/tv_verify"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@null"
+                android:hint="@string/please_enter_verification_code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textColorHint="@color/orange" />
+
+            <com.tsienlibrary.ui.widget.CountDownButton
+                android:id="@+id/btn_send_sms_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_verify"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="@string/send_verification_code"
+                android:textColor="@color/colorTextButton" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/rl_verify_code"
+            android:background="@color/me_divider" />
+
+        <Button
+            android:id="@+id/btn_alter_confirm"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@drawable/btn_login_out_shape_selector"
+            android:text="@string/setting_confirm_alter_phone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+</RelativeLayout>

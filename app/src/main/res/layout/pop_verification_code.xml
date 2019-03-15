@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pop_window_shape">
+
+    <!-- 验证码信息类容 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_400"
+        android:orientation="vertical">
+
+        <!-- 标题栏 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50">
+
+            <TextView
+                android:id="@+id/tv_verify_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/verification_code"
+                android:textColor="@color/me_text_color"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/iv_verify_close"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_16"
+                android:src="@drawable/btn_close" />
+        </RelativeLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/me_divider" />
+
+        <!-- 验证码图片+验证码编号 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_350"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_verify_img"
+                android:layout_width="@dimen/dp_220"
+                android:layout_height="@dimen/dp_220"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/test"
+                android:adjustViewBounds="true"
+                android:maxHeight="@dimen/dp_256"
+                android:maxWidth="@dimen/dp_256"
+                android:scaleType="centerInside"/>
+
+            <TextView
+                android:id="@+id/tv_verify_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_verify_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:textColor="@color/transaction_community_grid"
+                android:textSize="@dimen/sp_24" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

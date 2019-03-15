@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:srlAccentColor="@android:color/white"
+    app:srlPrimaryColor="@color/colorPrimary">
+
+
+    <com.scwang.smartrefresh.header.TaurusHeader
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_70"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/dp_5"
+            android:text="消息"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="@dimen/sp_23" />
+
+        <FrameLayout
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_government_affairs"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/dp_0_5"-->
+            <!--android:background="@color/white"-->
+            <!--android:padding="@dimen/dp_15">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_government_affairs"-->
+                <!--style="@style/me_icon_style"-->
+                <!--android:src="@mipmap/ic_government_affairs" />-->
+
+            <!--<TextView-->
+                <!--style="@style/me_text_style"-->
+                <!--android:layout_toRightOf="@+id/iv_government_affairs"-->
+                <!--android:text="@string/government_affairs" />-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/dp_0_5"-->
+            <!--android:background="@color/colorDivider" />-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_system_messages"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white"-->
+            <!--android:padding="@dimen/dp_15">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_system_messages"-->
+                <!--style="@style/me_icon_style"-->
+                <!--android:src="@mipmap/ic_system_msg" />-->
+
+            <!--<TextView-->
+                <!--style="@style/me_text_style"-->
+                <!--android:layout_toRightOf="@+id/iv_system_messages"-->
+                <!--android:text="@string/system_messages" />-->
+
+        <!--</RelativeLayout>-->
+    </LinearLayout>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

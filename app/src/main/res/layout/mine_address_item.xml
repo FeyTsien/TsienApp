@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- 姓名+手机号 类容 -->
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/me_alter_phone_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:text="@string/title_me" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/me_alter_phone_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:layout_toRightOf="@+id/tv_name" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_address"
+        style="@style/me_edit_text_2_style"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:text="@string/mine_address_detail" />
+
+    <!-- 选择默认地址框 -->
+    <CheckBox
+        android:id="@+id/cb_toggle"
+        style="@style/me_alter_phone_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_address"
+        android:layout_marginTop="@dimen/dp_8"
+        android:button="@drawable/cb_address_selector"
+        android:paddingLeft="@dimen/dp_10"
+        android:text="@string/mine_default_address"
+        android:textColor="@color/me_default_address_text"
+        android:layout_marginBottom="@dimen/dp_8"/>
+
+    <ImageView
+        style="@style/me_next_style"
+        android:layout_marginRight="@dimen/dp_14"/>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_5"
+    android:elevation="@dimen/dp_2"
+    android:padding="@dimen/dp_14"
+    android:gravity="center"
+    android:background="@color/white"
+    android:textColor="@color/colorTextTitle"
+    android:text="户籍"
+    android:textSize="@dimen/sp_16"/>

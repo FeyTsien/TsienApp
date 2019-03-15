@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--下划线颜色-->
+    <color name="colorDivider">#E1E5E6</color>
+
+    <!--水波纹或5.0以下选择器颜色（activity_web_view.xml）-->
+    <color name="tabBackground">#777D7D7D</color>
+
+    <!--页面字体颜色-->
+    <color name="text_color656565">#656565</color>
+    <color name="text_color282828">#282828</color>
+    <color name="text_color333333">#333333</color>
+    <color name="text_color4c4c4c">#4c4c4c</color>
+    <color name="text_color424242">#424242</color>
+    <color name="text_colorf66809">#f66809</color>
+    <color name="text_user_name">#fd6191</color>
+    <color name="colortimerclose">#13b7f6</color>
+
+
+    <color name="gray">#808080</color><!--灰色 -->
+    <color name="grey">#808080</color><!--灰色 -->
+
+    <!--透明 -->
+    <color name="color_transparent">#00000000</color>
+    <!--黑色-->
+    <color name="black">#000000</color>
+    <!--深灰色-->
+    <color name="darkGray">#272727</color>
+    <!--暗淡的灰色-->
+    <color name="dimGray">#696969</color>
+    <!--白色-->
+    <color name="white">#ffffff</color>
+    <!--幽灵白-->
+    <color name="ghostwhite">#F6F6F6</color>
+    <!--红色-->
+    <color name="red">#FF0000</color>
+    <!--橙色-->
+    <color name="orange">#FF5500</color>
+    <!--橙色1-->
+    <color name="orange1">#FFCC00</color>
+    <!--橙色2-->
+    <color name="orange2">#FFDD00</color>
+    <!--橙色3-->
+    <color name="orange3">#FFEE00</color>
+    <!--黄色 #FFFF00-->
+    <color name="yellow">#FFFF00</color>
+    <!--绿色-->
+    <color name="green">#00FF00</color>
+    <!--深绿色-->
+    <color name="bottle_green">#008855</color>
+    <!--深绿色-->
+    <color name="bottle_green1">#00AA55</color>
+    <!--深绿色-->
+    <color name="bottle_green2">#00CC55</color>
+    <!--深绿色-->
+    <color name="bottle_green3">#00DD55</color>
+    <!--青色 #00FFFF-->
+    <color name="cyan">#00FFFF</color>
+    <!--蓝色-->
+    <color name="blue">#0000FF</color>
+    <!--深天蓝色-->
+    <color name="deepSkyBlue">#00BFFF</color>
+    <!--淡蓝色-->
+    <color name="lightSkyBlue">#87CEFA</color>
+    <!--5 牡丹红 #FF00FF-->
+    <color name="peony">#FF00FF</color>
+    <!--金色-->
+    <color name="gold">#D4AF37</color>
+</resources>

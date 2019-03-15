@@ -1,0 +1,77 @@
+ext {
+    //android开发版本配置
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.0",
+            applicationId    : "com.hdnz.inanming",//好像直接改名字就变成新项目了
+            minSdkVersion    : 21,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "V1.0.1",
+    ]
+    //version配置
+    versions = [
+            "junit-version": "4.12",
+            "rxlifecycle"  : "2.2.1",
+            "okhttp3"      : "3.10.0",
+            "retrofit2"    : "2.4.0",
+            "gson"         : "2.8.5",   //https://github.com/google/gson
+            "glide"        : "4.8.0",   //https://github.com/bumptech/glide
+            "butterknife"  : "10.0.0",  //https://github.com/JakeWharton/butterknife
+            "eventbus"     : "3.1.1",   //https://github.com/greenrobot/EventBus
+    ]
+    //support配置
+    androidx = [
+            "constraint-layout": 'androidx.constraintlayout:constraintlayout:1.1.2',
+            'appcompat'        : "androidx.appcompat:appcompat:1.1.0-alpha01",
+            'design'           : "com.google.android.material:material:1.1.0-alpha02",
+            'junit'            : "junit:junit:${versions["junit-version"]}",
+    ]
+    //依赖第三方配置
+    dependencies = [
+            //rxjava
+            "rxjava"                : "io.reactivex.rxjava2:rxjava:2.0.2",
+            "rxandroid"             : "io.reactivex.rxjava2:rxandroid:2.0.2",
+            //rx管理View的生命周期，解决RxJava内存泄漏
+            "rxlifecycle"           : "com.trello.rxlifecycle2:rxlifecycle:${versions["rxlifecycle"]}",
+            "rxlifecycle-components": "com.trello.rxlifecycle2:rxlifecycle-components:${versions["rxlifecycle"]}",
+            //rxbinding
+            "rxbinding"             : "com.jakewharton.rxbinding2:rxbinding:2.1.1",
+            //6.0权限请求（https://github.com/tbruyelle/RxPermissions）
+            "rxpermissions"         : "com.github.tbruyelle:rxpermissions:0.10.2",
+
+            //network
+            "okhttp3"               : "com.squareup.okhttp3:okhttp:${versions["okhttp3"]}",
+            "logging-interceptor"   : "com.squareup.okhttp3:logging-interceptor:${versions["okhttp3"]}",
+            "retrofit"              : "com.squareup.retrofit2:retrofit:${versions["retrofit2"]}",
+            "converter-gson"        : "com.squareup.retrofit2:converter-gson:${versions["retrofit2"]}",
+            "converter-scalars"     : "com.squareup.retrofit2:converter-scalars:${versions["retrofit2"]}",
+            "adapter-rxjava"        : "com.squareup.retrofit2:adapter-rxjava2:${versions["retrofit2"]}",
+
+            //json解析
+            "gson"                  : "com.google.code.gson:gson:${versions["gson"]}",
+
+            //glide图片加载
+            "glide"                 : "com.github.bumptech.glide:glide:${versions["glide"]}",
+            "glide-compiler"        : "com.github.bumptech.glide:compiler:${versions["glide"]}",
+            //eventbus(https://github.com/greenrobot/EventBus)
+            "eventbus"              : "org.greenrobot:eventbus:${versions["eventbus"]}",
+
+            "butterknife"           : "com.jakewharton:butterknife:${versions["butterknife"]}",
+            "butterknife-compiler"  : "com.jakewharton:butterknife-compiler:${versions["butterknife"]}",
+
+            //新增StatusBarCompat是一个用于设置系统状态栏颜色的兼容库，兼容Android 4.4.2(API 19)以上，使用简单，仅需要一行代码的调用。https://github.com/msdx/status-bar-compat
+            //"status-bar-compat"                    : "com.githang:status-bar-compat:0.7",
+            //新增recyclerview侧滑显示删除、编辑等按钮
+            "recyclerview-swipe"    : "com.yanzhenjie:recyclerview-swipe:1.1.4",
+
+            //一个动画库，适应Android，iOS，React Native。( http://airbnb.io/lottie/android/android.html )
+            "lottie"                : "com.airbnb.android:lottie:2.7.0",
+
+            //扫描 （https://github.com/yipianfengye/android-zxingLibrary）
+            "zxing-library"         : "cn.yipianfengye.android:zxing-library:2.2"
+
+    ]
+}
+
+

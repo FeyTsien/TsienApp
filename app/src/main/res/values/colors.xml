@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">@color/colorTheme</color>
+    <color name="colorPrimaryDark">@color/bottle_green</color>
+    <color name="colorAccent">@color/colorTheme</color>
+
+    <!--主题颜色-->
+    <color name="colorTheme">#3D79FD</color>
+    <!--辅助颜色-->
+    <color name="colorSub1">#2446f2</color>
+
+    <!--每页底色-->
+    <color name="pageBG">#F2F2F2</color>
+    <!--字体颜色-->
+    <color name="colorTextTitle">#354052</color>
+    <color name="colorTextButton">#3D79FD</color>
+    <!--浅色字体-->
+    <color name="colorTextTint">#FF7F8FA4</color>
+    <!--Hint字体颜色-->
+    <color name="colorTextHint">#ADADAD</color>
+    <!--按钮颜色——浅色按钮-->
+    <color name="colorButtonLight">#EAF0FF</color>
+    <!--按钮颜色——不可选按钮-->
+    <color name="colorButtonfocused">#dddddd</color>
+    <!--下划线颜色-->
+    <color name="colorDivider">#E1E5E6</color>
+
+    <!-- 我的模块：姓名、实名认证、我的积分等颜色值 -->
+    <color name="me_text_color">#404B69</color>
+    <!-- 我的模块：手机号文本颜色值 -->
+    <color name="me_text_phone">#70788C</color>
+    <!-- 我的模块：个人信息标题颜色 -->
+    <color name="me_title">#020433</color>
+    <!-- 我的模块：个人信息,保存颜色 -->
+    <color name="me_save">#3D79FD</color>
+    <color name="me_divider">#E1E5E6</color>
+    <!-- 设置页面手机号码颜色 -->
+    <color name="me_setting_phone">#ADADAD</color>
+    <!-- 设置页面退出登录背景颜色 -->
+    <color name="me_setting_login_out">#FE395D</color>
+    <color name="me_setting_phone_text">#7F7F7F</color>
+    <color name="me_setting_phone_text_num">#1D1D1D</color>
+    <color name="me_default_address_text">#666666</color>
+    <color name="me_bg_idcard">#EAF0FF</color>
+    <color name="check_success_left_text">#8F9294</color>
+    <color name="check_success_right_text">#303133</color>
+    <!-- 时间轴审核进度成功颜色 -->
+    <color name="check_progress_success">#4CD964</color>
+    <color name="scan_corner_color">#0effc2</color>
+    <!-- 已认证文本颜色 -->
+    <color name="authentication_success_text">#60DDA1</color>
+    <color name="authentication_image_background">#F3F7F8</color>
+    <color name="task_status_stroke">#6B6B6B</color>
+    <color name="home_search_bg">#f1f1f1</color>
+    <color name="transaction_community_grid">#212121</color>
+    <color name="evaluate_service">#F1F1F2</color>
+    <color name="card_base_info">#3270DA</color>
+    <color name="book_grey">#909090</color>
+    <color name="product_name">#354052</color>
+    <color name="order_status">#7F8FA4</color>
+    <color name="bg_item_order">#F2F2F2</color>
+    <color name="order_divider">#F2F3F5</color>
+</resources>

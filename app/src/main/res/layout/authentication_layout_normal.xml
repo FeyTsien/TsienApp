@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_normal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 提示语 -->
+    <TextView
+        android:id="@+id/tv_tip"
+        style="@style/me_alter_phone_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:text="@string/authentication_normal_tip" />
+
+    <!-- 支付宝入口界面布局 -->
+    <RelativeLayout
+        android:id="@+id/rl_alipay_normal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_185"
+        android:layout_below="@+id/tv_tip"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_32"
+        android:background="@drawable/bg_idcard_shape_selector">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_alipay"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_50"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/alipay" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_alipay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/pass_alipay_authentication"
+                android:textColor="@color/me_text_phone"
+                android:textSize="@dimen/dp_16" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 身份证入口界面布局 -->
+    <RelativeLayout
+        android:id="@+id/rl_idcard_normal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_185"
+        android:layout_below="@+id/tv_tip"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_32"
+        android:background="@drawable/bg_idcard_shape_selector">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_idcard"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_50"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/bg_idcard" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_idcard"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/pass_idcard_authentication"
+                android:textColor="@color/me_text_phone"
+                android:textSize="@dimen/dp_16" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

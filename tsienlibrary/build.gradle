@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //androidx
+    implementation rootProject.ext.androidx["appcompat"]
+    implementation rootProject.ext.androidx["design"]
+    testImplementation rootProject.ext.androidx["junit"]
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    //===============================================================================================
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["rxjava"]
+    api rootProject.ext.dependencies["rxandroid"]
+    api rootProject.ext.dependencies["retrofit"]
+    //    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    api rootProject.ext.dependencies["adapter-rxjava"]
+    api rootProject.ext.dependencies["converter-scalars"]
+    api rootProject.ext.dependencies["okhttp3"]
+    api rootProject.ext.dependencies["logging-interceptor"]
+    api rootProject.ext.dependencies["rxpermissions"]
+
+    //一个 Android 系统的 View 注入框架，能够通过『注解』的方式来绑定 View 的属性或方法（主app也写了annotationProcessor）
+    api rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
+    api rootProject.ext.dependencies["eventbus"]
+    //https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md
+    api 'com.blankj:utilcode:1.22.7'
+    api rootProject.ext.dependencies["lottie"]
+    api project(':loadsir')
+}

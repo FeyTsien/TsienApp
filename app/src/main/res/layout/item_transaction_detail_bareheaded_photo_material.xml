@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- 申请材料 -->
+    <TextView
+        android:id="@+id/tv_bareheaded_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="@string/application_material"
+        android:textColor="@color/me_text_color"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <!-- 近期免冠材料栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_bareheaded_apply"
+        android:layout_margin="@dimen/dp_16">
+
+        <!-- 证件类型+状态栏 -->
+        <LinearLayout
+            android:id="@+id/ll_bareheaded_photo_cont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_bareheaded_photo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="2. 近期免冠1寸照"
+                android:textColor="@color/me_text_color"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_bareheaded_photo_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:text="上传的证照不真实"
+                android:textColor="@color/me_setting_login_out"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <!-- 近期免冠照 -->
+        <ImageView
+            android:id="@+id/iv_bareheaded_photo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_185"
+            android:layout_below="@+id/ll_bareheaded_photo_cont"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/btn_save_shape_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/test" />
+    </RelativeLayout>
+</RelativeLayout>

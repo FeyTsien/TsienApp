@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/app_toolbar" />
+
+    <!-- 地址内容 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <!-- 填写姓名栏 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/me_alter_phone_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/name"
+                android:textColor="@color/me_text_color" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/me_edit_text_2_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@null"
+                android:hint="@string/please_enter_name"
+                android:inputType="textAutoComplete"
+                android:maxLength="10"
+                android:textColorHint="@color/colorTextHint" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/et_name"
+                android:background="@color/me_divider" />
+        </RelativeLayout>
+
+        <!-- 填写电话栏 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70">
+
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/me_alter_phone_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/phone_num"
+                android:textColor="@color/me_text_color" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                style="@style/me_edit_text_2_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_below="@+id/tv_phone"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@null"
+                android:hint="@string/please_enter_phone_number"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textColorHint="@color/colorTextHint" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/et_phone"
+                android:background="@color/me_divider" />
+
+        </RelativeLayout>
+
+        <!-- 填写身份证栏 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70">
+
+            <TextView
+                android:id="@+id/tv_idCard"
+                style="@style/me_alter_phone_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/idcard"
+                android:textColor="@color/me_text_color" />
+
+            <EditText
+                android:id="@+id/et_idCard"
+                style="@style/me_edit_text_2_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_below="@+id/tv_idCard"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@null"
+                android:hint="@string/please_enter_idcard"
+                android:inputType="textAutoComplete"
+                android:maxLength="18"
+                android:textColorHint="@color/colorTextHint" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/et_idCard"
+                android:background="@color/me_divider" />
+
+        </RelativeLayout>
+        <!-- 填写所在地区 栏 -->
+        <RelativeLayout
+            android:id="@+id/rl_district"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70">
+
+            <TextView
+                android:id="@+id/tv_district"
+                style="@style/me_alter_phone_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/district"
+                android:textColor="@color/me_text_color" />
+
+            <TextView
+                android:id="@+id/tv_show_district"
+                style="@style/me_edit_text_2_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_below="@+id/tv_district"
+                android:layout_marginTop="@dimen/dp_5"
+                android:hint="@string/please_lselect"
+                android:text="@string/mine_district"
+                android:textColorHint="@color/colorTextHint" />
+
+            <!--<ImageView-->
+            <!--style="@style/me_next_style"-->
+            <!--android:layout_marginRight="@dimen/dp_14" />-->
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tv_show_district"
+                android:background="@color/me_divider" />
+        </RelativeLayout>
+
+
+        <!-- 填写所在楼栋 栏 -->
+        <RelativeLayout
+            android:id="@+id/rl_building"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70">
+
+            <TextView
+                android:id="@+id/tv_building"
+                style="@style/me_alter_phone_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/building"
+                android:textColor="@color/me_text_color" />
+
+            <TextView
+                android:id="@+id/tv_show_building"
+                style="@style/me_edit_text_2_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_below="@+id/tv_building"
+                android:layout_marginTop="@dimen/dp_5"
+                android:hint="@string/please_lselect"
+                android:textColorHint="@color/colorTextHint" />
+
+            <ImageView
+                style="@style/me_next_style"
+                android:layout_marginRight="@dimen/dp_14" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tv_show_building"
+                android:background="@color/me_divider" />
+        </RelativeLayout>
+
+
+        <!-- 填写所在门牌号 栏 -->
+        <RelativeLayout
+            android:id="@+id/rl_house_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_house_number"
+                style="@style/me_alter_phone_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/house_number"
+                android:textColor="@color/me_text_color" />
+
+            <TextView
+                android:id="@+id/tv_show_house_number"
+                style="@style/me_edit_text_2_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_below="@+id/tv_house_number"
+                android:layout_marginTop="@dimen/dp_5"
+                android:hint="@string/please_lselect"
+                android:textColorHint="@color/colorTextHint" />
+
+            <ImageView
+                style="@style/me_next_style"
+                android:layout_marginRight="@dimen/dp_14" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tv_show_house_number"
+                android:background="@color/me_divider" />
+        </RelativeLayout>
+
+        <!-- 填写所在门牌号 栏 -->
+        <RelativeLayout
+            android:id="@+id/rl_remark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70">
+
+            <TextView
+                android:id="@+id/tv_remark"
+                style="@style/me_alter_phone_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/remark"
+                android:textColor="@color/me_text_color" />
+
+            <EditText
+                android:id="@+id/et_remark"
+                style="@style/me_edit_text_2_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_below="@+id/tv_remark"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@null"
+                android:hint="详细备注"
+                android:textColorHint="@color/colorTextHint" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/et_remark"
+                android:background="@color/me_divider" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

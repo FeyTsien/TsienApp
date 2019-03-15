@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_16">
+
+    <!-- 图片+证明栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 头像图片 -->
+        <ImageView
+            android:id="@+id/iv_header"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test" />
+
+        <!-- XXX局+证明类型 -->
+        <LinearLayout
+            android:id="@+id/ll_tax_and_prove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_toEndOf="@+id/iv_header"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_business_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/sp_16" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_business_name"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/dp_2"-->
+                <!--android:text="@string/manage_social_security_card"-->
+                <!--android:textColor="@color/colorTextTitle"-->
+                <!--android:textSize="@dimen/sp_14" />-->
+        </LinearLayout>
+
+        <!-- 状态——未取号 -->
+        <TextView
+            android:id="@+id/tv_is_take"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/me_setting_login_out"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_one">
+        <!-- 取号吗栏 -->
+        <LinearLayout
+            android:id="@+id/rl_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15">
+
+            <!-- 取号吗 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取  号  码："
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_take_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <!-- 预约时间 -->
+        <LinearLayout
+            android:id="@+id/rl_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_two"
+            android:layout_marginTop="@dimen/dp_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_time_text"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_book_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <!-- 取消预约按钮 -->
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_save_shape_selector"
+            android:padding="@dimen/dp_8"
+            android:text="@string/book_cancel"
+            android:textColor="@color/btn_save_selector"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+</RelativeLayout>

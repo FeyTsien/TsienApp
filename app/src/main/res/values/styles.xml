@@ -1,0 +1,150 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/black</item>
+    </style>
+
+    <!--全屏显示，无透明状态栏-->
+    <style name="TranslucentTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/logo_splash</item>
+        <!--<item name="colorPrimaryDark">@android:color/transparent</item>-->
+    </style>
+    <!--全屏显示，有透明状态栏-->
+    <style name="statusBarTheme" parent="AppTheme"></style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <!-- 我的模块，界面文本大小颜色style -->
+    <style name="me_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/colorTextTitle</item>
+    </style>
+
+    <style name="me_icon_style">
+        <item name="android:layout_width">@dimen/dp_22</item>
+        <item name="android:layout_height">@dimen/dp_22</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/dp_7</item>
+    </style>
+
+    <style name="me_next_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dp_12</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@mipmap/icon_arrow_gray</item>
+    </style>
+
+    <!-- 我的模块，编辑个人信息，颜色style -->
+    <style name="me_edit_text_1_style">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/colorTextTitle</item>
+        <item name="android:layout_marginLeft">@dimen/dp_16</item>
+    </style>
+
+
+    <!-- 我的模块，编辑个人信息，颜色style -->
+    <style name="me_edit_text_2_style">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/me_text_color</item>
+        <item name="android:layout_marginLeft">@dimen/dp_16</item>
+    </style>
+
+    <!-- 我的模块，更换手机号，颜色style -->
+    <style name="me_alter_phone_text_style">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/me_text_phone</item>
+        <item name="android:layout_marginLeft">@dimen/dp_16</item>
+    </style>
+
+    <!-- 审核成功左侧文本style -->
+    <style name="check_success_left_text_style">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/check_success_left_text</item>
+    </style>
+
+    <!-- 审核成功右侧文本style -->
+    <style name="check_success_right_text_style">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/check_success_right_text</item>
+    </style>
+
+    <!-- PopWindow 从下往上动画 -->
+    <style name="pop_shop_anim">
+        <!-- 显示 -->
+        <item name="android:windowEnterAnimation">@anim/pop_show</item>
+        <!-- 消失 -->
+        <item name="android:windowExitAnimation">@anim/pop_hide</item>
+    </style>
+
+    <!-- toolbar菜单颜色 -->
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- 设置 toolbar 溢出菜单的文字的颜色 -->
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="actionMenuTextColor">@android:color/holo_orange_dark</item>
+        <item name="colorButtonNormal">@android:color/holo_red_dark</item>
+        <item name="colorControlNormal">@android:color/holo_orange_dark</item>
+    </style>
+
+    <!--全屏背景透明 activity-->
+    <style name="translucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- 评分控件样式 -->
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_comment</item>
+        <item name="android:minHeight">@dimen/dp_24</item>
+        <item name="android:maxHeight">@dimen/dp_24</item>
+    </style>
+
+    <!-- 设置dialog全屏方式，样式增强版 -->
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <!-- 移除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--去除顶部标题栏-->
+        <item name="android:windowNoTitle">true</item>
+        <!--窗体透明-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--背景颜色及和透明程度-->
+        <item name="android:background">@android:color/white</item>
+        <!--窗体背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--窗体是否浮动-->
+        <item name="android:windowIsFloating">true</item>
+        <!--背景是否昏暗-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--昏暗数量-->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+    <!-- 我的积分tablayout字体大小设置 -->
+    <style name="TabLayoutTextSize">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <!-- 我的积分tablayout字体加粗设置 -->
+    <style name="TabLayoutTextBold">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
+

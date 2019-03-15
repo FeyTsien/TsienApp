@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/colorButtonLight" />
+    <corners android:radius="@dimen/dp_20" />
+    <padding
+        android:bottom="@dimen/dp_10"
+        android:left="15dp"
+        android:right="15dp"
+        android:top="@dimen/dp_10" />
+</shape>

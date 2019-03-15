@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- 最外层卡片布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_246"
+        android:orientation="vertical">
+
+        <!-- 第一层业务名称布局 -->
+        <RelativeLayout
+            android:id="@+id/rl_one_cont"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_58"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16">
+
+            <!-- 业务名称和时间栏 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_proof_name"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="@dimen/dp_25"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="20"
+                    android:gravity="center_vertical"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/social_security_card"
+                    android:textColor="@color/me_text_color"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_datetime"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="@dimen/dp_25"
+                    android:text="@string/datetime"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/me_text_phone"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+            <!-- 审核状态 -->
+            <TextView
+                android:id="@+id/tv_check_status"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/waiting_check"
+                android:textColor="@color/me_text_color"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:background="@color/me_divider" />
+
+        <!-- 第二层申请人布局 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_136"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16">
+
+            <!-- 申请人姓名栏 -->
+            <RelativeLayout
+                android:id="@+id/rl_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <TextView
+                    android:id="@+id/tv_applicant"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_20"
+                    android:gravity="right"
+                    android:text="@string/transaction_applicant"
+                    android:textColor="@color/me_text_phone"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_applicant_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@+id/tv_applicant"
+                    android:text="@string/name"
+                    android:textColor="@color/me_text_color"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <!-- 申请人办理方式栏 -->
+            <RelativeLayout
+                android:id="@+id/rl_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_one"
+                android:layout_marginTop="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/tv_handle"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_20"
+                    android:gravity="right"
+                    android:text="@string/transaction_handle"
+                    android:textColor="@color/me_text_phone"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_handle_way"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@+id/tv_handle"
+                    android:text="@string/app_name"
+                    android:textColor="@color/me_text_color"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <!-- 申请人办理状态栏 -->
+            <RelativeLayout
+                android:id="@+id/rl_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_two"
+                android:layout_marginTop="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_20"
+                    android:gravity="right"
+                    android:text="@string/transaction_status"
+                    android:textColor="@color/me_text_phone"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_handle_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@+id/tv_status"
+                    android:text="@string/app_name"
+                    android:textColor="@color/me_text_color"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <!-- 申请人备注栏 -->
+            <RelativeLayout
+                android:id="@+id/rl_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_three"
+                android:layout_marginTop="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/tv_remark"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_20"
+                    android:gravity="right"
+                    android:text="@string/transaction_remark"
+                    android:textColor="@color/me_text_phone"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_remark_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_toRightOf="@+id/tv_remark"
+                    android:text="@string/app_name"
+                    android:textColor="@color/me_text_color"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:background="@color/me_divider" />
+
+        <!-- 第三层查看详情、网格员布局 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/btn_grid_personnel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_20"
+                android:layout_margin="@dimen/dp_8"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/grid_personnel"
+                android:textColor="@color/btn_save_selector"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/btn_view_detail"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_20"
+                android:layout_margin="@dimen/dp_8"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/view_details"
+                android:textColor="@color/btn_save_selector"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/btn_evaluation_service"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_20"
+                android:layout_margin="@dimen/dp_8"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/evaluation_service"
+                android:textColor="@color/btn_save_selector"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:background="@color/me_divider" />
+    </LinearLayout>
+</RelativeLayout>

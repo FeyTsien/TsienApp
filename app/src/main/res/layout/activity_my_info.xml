@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 导航栏 -->
+    <include layout="@layout/app_toolbar" />
+
+    <!-- 个人资料布局 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- 头像+拍照 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:background="#EFEFEF">
+
+                <ImageView
+                    android:id="@+id/iv_my_portrait"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="@dimen/dp_200"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/test" />
+
+                <ImageView
+                    android:id="@+id/iv_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:src="@drawable/camera" />
+            </RelativeLayout>
+
+            <!-- 姓名资料 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_77">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    style="@style/me_edit_text_1_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/nickname" />
+
+                <EditText
+                    android:id="@+id/et_nickname"
+                    style="@style/me_edit_text_2_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv1"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:maxLength="8"
+                    android:hint="请输入昵称（最大长度为8）"
+                    android:text="@string/nickname"
+                    android:textColorHint="@color/colorTextHint" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0_5"
+                android:background="@color/me_divider" />
+
+            <!-- 个性签名资料 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70">
+
+                <TextView
+                    android:id="@+id/tv3"
+                    style="@style/me_edit_text_1_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="@string/mine_signature" />
+
+                <EditText
+                    android:id="@+id/et_signature"
+                    style="@style/me_edit_text_2_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv3"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@null"
+                    android:hint="请输入个性签名（最大长度为20）"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:text="@string/mine_signature"
+                    android:textColorHint="@color/colorTextHint" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:background="@color/me_divider" />
+
+            <!-- 手机资料 -->
+            <RelativeLayout
+                android:id="@+id/rl_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    style="@style/me_edit_text_1_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="@string/phone_number" />
+
+                <TextView
+                    android:id="@+id/tv_phone_number"
+                    style="@style/me_edit_text_2_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv2"
+                    android:layout_marginTop="@dimen/dp_4"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_12"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/dp_17"
+                    android:src="@mipmap/icon_arrow_gray" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0_5"
+                android:background="@color/me_divider" />
+
+
+            <!-- 我的地址资料 -->
+            <RelativeLayout
+                android:id="@+id/rl_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70">
+
+                <TextView
+                    android:id="@+id/tv5"
+                    style="@style/me_edit_text_1_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="@string/mine_address" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    style="@style/me_edit_text_2_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv5"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="@string/mine_address" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_12"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/dp_17"
+                    android:src="@mipmap/icon_arrow_gray" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:background="@color/me_divider" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

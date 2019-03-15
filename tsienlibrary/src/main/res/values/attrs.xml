@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--countDownButton-->
+    <declare-styleable name="countDownButton">
+        <attr name="millisinfuture" format="integer" />
+        <attr name="countdowninterva" format="integer" />
+        <attr name="normalColor" format="color" />
+        <attr name="countDownColor" format="color" />
+    </declare-styleable>
+
+
+    <!--圆形图片-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="circle" format="boolean" />
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <include layout="@layout/app_toolbar" />
+
+    <!-- 滑动控件 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 内容栏 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 拍照提示语 -->
+            <TextView
+                style="@style/me_alter_phone_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/camera_tip" />
+
+            <!-- 拍摄身份证正面 -->
+            <RelativeLayout
+                android:id="@+id/rl_idcard_face"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/bg_idcard_shape_selector">
+
+                <!-- 隐藏的界面 -->
+                <RelativeLayout
+                    android:id="@+id/rl_idcard_face_hide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/iv_idcard_face"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/bg_idcard_face" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_idcard_face"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:text="@string/camera_face"
+                        android:textColor="@color/me_text_phone"
+                        android:textSize="@dimen/dp_16" />
+                </RelativeLayout>
+
+                <!-- 显示拍照图片的界面 -->
+                <ImageView
+                    android:id="@+id/iv_idcard_side_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/test"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!-- 拍摄身份证反面 -->
+            <RelativeLayout
+                android:id="@+id/rl_idcard_reverse"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/bg_idcard_shape_selector">
+
+                <!-- 隐藏的界面 -->
+                <RelativeLayout
+                    android:id="@+id/rl_idcard_reverse_hide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/iv_idcard_reverse"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/bg_idcard_reverse" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_idcard_reverse"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:text="@string/camera_reverse"
+                        android:textColor="@color/me_text_phone"
+                        android:textSize="@dimen/dp_16" />
+                </RelativeLayout>
+
+                <!-- 显示拍照图片的界面 -->
+                <ImageView
+                    android:id="@+id/iv_idcard_side_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/test"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!-- 手持身份证拍摄正面 -->
+            <RelativeLayout
+                android:id="@+id/rl_idcard_hand"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/bg_idcard_shape_selector">
+
+                <!-- 隐藏的界面 -->
+                <RelativeLayout
+                    android:id="@+id/rl_idcard_hand_hide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/iv_idcard_hand"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/bg_idcard_hand" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_idcard_hand"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:text="@string/camera_hand_idcard_face"
+                        android:textColor="@color/me_text_phone"
+                        android:textSize="@dimen/dp_16" />
+                </RelativeLayout>
+
+                <!-- 显示拍照图片的界面 -->
+                <ImageView
+                    android:id="@+id/iv_hand_idcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/test"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
