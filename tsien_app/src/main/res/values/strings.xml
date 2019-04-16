@@ -1,0 +1,37 @@
+<resources>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="app_name">Tsien</string>
+
+    <string name="title_home">首页</string>
+    <string name="title_workbench">工作台</string>
+    <string name="title_message">消息</string>
+    <string name="title_me">我的</string>
+
+    <string name="confirm">确认</string>
+    <string name="log_in">登录</string>
+    <string name="log_up">注册</string>
+    <string name="log_out">退出</string>
+    <string name="quick_login">快捷登录</string>
+    <string name="phone_num">手机号</string>
+    <string name="set_password">设置密码</string>
+    <string name="password">密码</string>
+    <string name="verification_code">验证码</string>
+    <string name="please_enter_phone_number">请输入手机号</string>
+    <string name="please_enter_verification_code">请输入验证码</string>
+    <string name="please_enter_password">请输入密码</string>
+    <string name="send_verification_code">发送验证码</string>
+    <string name="password_login">密码登录</string>
+    <string name="forget_password">忘记密码?</string>
+    <string name="verification_code_login">验证码登录</string>
+    <string name="code_error">验证码错误。</string>
+
+
+    <string name="search">搜索</string>
+    <string name="scan">扫描</string>
+    <string name="photo_albums">相册</string>
+
+</resources>

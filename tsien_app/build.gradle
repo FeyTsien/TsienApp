@@ -1,0 +1,125 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+//    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        applicationId "com.tsien"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //添加了javaCompileOptions
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+//            abiFilters 'armeabi', 'armeabi-v7a', 'x86', 'mips'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "278b52847998dec4cc8e63ae", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+
+    }
+
+    compileOptions {
+//        targetCompatibility 1.8
+//        sourceCompatibility 1.8
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            // 不显示Log
+//            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled false
+//            // 资源文件压缩
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    testImplementation rootProject.ext.androidx["junit"]
+    //androidx
+    implementation rootProject.ext.androidx["appcompat"]
+    implementation rootProject.ext.androidx["design"]
+    implementation rootProject.ext.androidx["constraint-layout"]
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0-alpha01'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0-alpha01'
+
+    //==================================以下为个人添加三方库======================================
+
+    //自己的工具类
+    implementation project(':tsienlibrary')
+
+    //    配置方法数超过 64K 的应用
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //一个 Android 系统的 View 注入框架，能够通过『注解』的方式来绑定 View 的属性或方法
+
+    //    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
+    //新加glide
+    implementation rootProject.ext.dependencies["glide"]
+    implementation rootProject.ext.dependencies["glide-compiler"]
+
+    //新增侧滑删除列表
+    implementation rootProject.ext.dependencies["recyclerview-swipe"]
+    //扫描
+    implementation rootProject.ext.dependencies["zxing-library"]
+
+    //  下拉刷新控件  （https://github.com/scwang90/SmartRefreshLayout)
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-andx-2'
+    //没有使用特殊Header，可以不加这行
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-andx-2'
+
+    // 此处以JPush 3.1.6 版本为例。
+    implementation 'cn.jiguang.sdk:jpush:3.1.7'
+    // 此处以JCore 1.2.5 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.2.6'
+    // 支付宝 SDK AAR 包所需的配置
+    implementation(name: 'alipaySdk-15.5.9-20181123210601', ext: 'aar')
+
+    //增加图片裁剪框架  https://github.com/Yalantis/uCrop
+    implementation 'com.github.yalantis:ucrop:2.2.2-native'
+
+    //PopupWindow (https://github.com/razerdp/BasePopup)
+    implementation 'com.github.razerdp:BasePopup:2.1.9'
+
+    //视频播放库（https://github.com/CarGuo/GSYVideoPlayer）
+    implementation 'com.shuyu:GSYVideoPlayer:6.0.3'
+
+    //Android图片轮播控件（https://github.com/wenchaosong/Banner）
+    implementation 'com.github.wenchaosong:Banner:2.3.1'
+
+    //选择器控件（https://github.com/Bigkoo/Android-PickerView）
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+}

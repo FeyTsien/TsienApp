@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tsien">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 8.0打开apk，安装权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- &lt;!&ndash; 硬件加速对X5视频播放非常重要，建议开启 &ndash;&gt; -->
+    <!-- <uses-permission android:name="android.permission.GET_TASKS" /> -->
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:maxRecents="5"
+        android:roundIcon="@mipmap/ic_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup"
+        tools:targetApi="m">
+        <!--Android P 将禁止 App 使用所有未加密的连接，加上android:usesCleartextTraffic="true"可避免-->
+
+        <!-- 服务器选择列表 -->
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:theme="@style/TranslucentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <!-- &lt;!&ndash; 下载测试 &ndash;&gt; -->
+        <!-- <activity android:name=".mvp.ui.activity.DownloadTestActivity" /> -->
+        <!-- 登录 -->
+        <activity
+            android:name=".ui.activity.login.LoginActivity"
+            android:launchMode="singleTop" />
+        <!-- 密码登录 -->
+        <activity
+            android:name=".ui.activity.login.LoginPwdLoginActivity"
+            android:launchMode="singleTop" />
+        <!-- 密码登录 -->
+        <activity
+            android:name=".ui.activity.login.ForgetPasswordActivity"
+            android:launchMode="singleTop" />
+        <!-- 注册 -->
+        <activity
+            android:name=".ui.activity.login.LogUpActivity"
+            android:launchMode="singleTop" />
+
+        <!-- 主页 -->
+        <activity
+            android:name=".ui.activity.main.MainActivity"
+        android:launchMode="singleTask" />
+
+        <!--LinkActivity-->
+        <activity
+            android:name=".ui.activity.ApplinksActivity"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter
+                android:autoVerify="true"
+                tools:targetApi="m">
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="link"
+                    android:path="/qqq"
+                    android:scheme="https" />
+                <data
+                    android:host="link"
+                    android:path="/qqq"
+                    android:scheme="http" />
+
+            </intent-filter>
+        </activity>
+
+        <!-- WebView -->
+        <activity
+            android:name=".webview.WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+
+        <!--==================首页===================================-->
+        <!-- 自定义扫描 -->
+        <activity
+            android:name=".ui.activity.home.ScanActivity"
+            android:launchMode="singleTop" />
+
+        <!-- 头条列表 -->
+        <activity
+            android:name=".ui.activity.headlinelist.HeadLineActivity"
+            android:launchMode="singleTop" />
+        <!-- ================================== 服务 Service================================ -->
+
+        <!-- 下载Service -->
+        <service android:name=".service.DownLoadService" />
+        <!-- 定位Service -->
+        <service android:name=".service.LocationService" />
+
+        <!-- =====================================极光推送相关=================================== -->
+
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".jpush.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent（自定义消息Push） -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开通知栏的intent（不配置此项，点击默认打开的是程序的主Activity） -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.tsien" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调-->
+        <receiver android:name=".jpush.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.tsien" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ========================7.0访问文件所需配置========================== -->
+        <!-- 文件提供者（用在选择图片） -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.tsien.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+</manifest>
