@@ -89,7 +89,7 @@
                 <data
                     android:host="link"
                     android:path="/qqq"
-                    android:scheme="http" />
+                    android:scheme="ht" />
 
             </intent-filter>
         </activity>

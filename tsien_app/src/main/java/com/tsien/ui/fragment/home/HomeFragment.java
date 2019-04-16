@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -182,7 +183,7 @@ public class HomeFragment extends MVPFragment<MVPContract.View, MVPPresenter> {
         });
     }
 
-    @OnClick({R.id.iv_bg, R.id.btn_goto, R.id.iv_scan, R.id.iv_search})
+    @OnClick({R.id.iv_bg, R.id.btn_goto, R.id.iv_scan, R.id.iv_search, R.id.btn_start_instant})
     void onClicks(View view) {
         switch (view.getId()) {
             case R.id.iv_bg:
@@ -197,6 +198,9 @@ public class HomeFragment extends MVPFragment<MVPContract.View, MVPPresenter> {
                 ToastUtils.showLong("点击了iv_scan");
                 String[] permissions = {Manifest.permission.CAMERA, Manifest.permission.READ_PHONE_STATE};
                 mPresenter.setPermissions(rxPermissions, permissions);
+                break;
+            case R.id.btn_start_instant:
+                startInstantApp();
                 break;
         }
     }
@@ -264,6 +268,20 @@ public class HomeFragment extends MVPFragment<MVPContract.View, MVPPresenter> {
         } else {
             return false;
         }
+    }
+
+
+    void startInstantApp(){
+        ToastUtils.showShort("启动Instant App");
+        Intent intent=new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory("android.intent.category.BROWSABLE");
+        intent.addCategory("android.intent.category.DEFAULT");
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
+        intent.addFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+        intent.setData(Uri.parse("https://tsien.com/"));
+//        it.setPackage();
+        startActivity(intent);
     }
 
 }

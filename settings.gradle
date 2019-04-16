@@ -1,1 +1,1 @@
-include ':tsien_app', ':tsienlibrary', ':loadsir', ':ocr_ui'
+include ':tsien_app', ':tsienlibrary', ':loadsir'
