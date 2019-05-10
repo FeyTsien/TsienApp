@@ -13,8 +13,6 @@ import okio.Source;
 
 /**
  * Description: 带进度 下载请求体
- * Created by jia on 2017/11/30.
- * 人之所以能，是相信能
  */
 public class JsResponseBody extends ResponseBody {
     private ResponseBody responseBody;

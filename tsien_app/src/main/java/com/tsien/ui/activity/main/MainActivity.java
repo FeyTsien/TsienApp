@@ -29,7 +29,7 @@ import com.tsien.ui.fragment.workbench.WorkbenchFragment;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.tsienlibrary.bean.CommonBean;
 import com.tsienlibrary.eventbus.Event;
-import com.tsienlibrary.eventbus.EventCode;
+import com.tsien.eventbus.EventCode;
 import com.tsienlibrary.ui.fragment.fragmentBackHandler.BackHandlerHelper;
 import com.tsienlibrary.ui.widget.dialog.DialogUtils;
 import com.tsienlibrary.utils.OpenFileUtils;

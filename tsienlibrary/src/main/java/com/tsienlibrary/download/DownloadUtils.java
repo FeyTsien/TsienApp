@@ -24,8 +24,6 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 /**
  * Description: 下载工具类
- * Created by jia on 2017/11/30.
- * 人之所以能，是相信能
  */
 public class DownloadUtils {
     private static final String TAG = "DownloadUtils";

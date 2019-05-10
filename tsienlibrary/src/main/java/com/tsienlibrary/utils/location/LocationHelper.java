@@ -5,7 +5,7 @@ import android.location.Location;
 import android.os.Bundle;
 
 /**
- * Created by xianglin on 16/9/20.
+ *
  */
 public interface LocationHelper {
 

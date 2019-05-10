@@ -2,18 +2,14 @@ package com.tsien.webview;
 
 import android.app.Activity;
 import android.content.Context;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
-import android.widget.Toast;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.tsien.ui.activity.login.LoginActivity;
 import com.tsienlibrary.eventbus.Event;
 import com.tsienlibrary.eventbus.EventBusUtil;
-import com.tsienlibrary.eventbus.EventCode;
+import com.tsien.eventbus.EventCode;
 
 import static com.blankj.utilcode.util.ActivityUtils.startActivity;
 

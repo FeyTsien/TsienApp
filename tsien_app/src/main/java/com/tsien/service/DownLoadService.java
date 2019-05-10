@@ -8,7 +8,7 @@ import com.tsien.mvp.contract.DownloadContract;
 import com.tsien.mvp.presenter.DownloadPresenter;
 import com.tsienlibrary.eventbus.Event;
 import com.tsienlibrary.eventbus.EventBusUtil;
-import com.tsienlibrary.eventbus.EventCode;
+import com.tsien.eventbus.EventCode;
 import com.tsienlibrary.mvp.base.MVPBaseService;
 import com.tsienlibrary.utils.NotificationUtil;
 import com.tsienlibrary.utils.OpenFileUtils;

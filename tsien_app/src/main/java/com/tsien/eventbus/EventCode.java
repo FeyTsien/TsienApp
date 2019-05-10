@@ -1,4 +1,4 @@
-package com.tsienlibrary.eventbus;
+package com.tsien.eventbus;
 
 public final class EventCode {
     public static final int MAIN_A = 0x111001;//主界面-MainActivity

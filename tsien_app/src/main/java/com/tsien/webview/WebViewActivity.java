@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import com.blankj.utilcode.util.ToastUtils;
 import com.tsien.R;
 import com.tsienlibrary.eventbus.Event;
-import com.tsienlibrary.eventbus.EventCode;
+import com.tsien.eventbus.EventCode;
 import com.tsienlibrary.ui.activity.BaseActivity;
 
 import java.net.MalformedURLException;

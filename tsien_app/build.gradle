@@ -4,7 +4,7 @@ android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 //    buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
-        applicationId "com.tsien"
+        applicationId rootProject.ext.android.applicationId
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
@@ -108,18 +108,17 @@ dependencies {
     // 支付宝 SDK AAR 包所需的配置
     implementation(name: 'alipaySdk-15.5.9-20181123210601', ext: 'aar')
 
-    //增加图片裁剪框架  https://github.com/Yalantis/uCrop
-    implementation 'com.github.yalantis:ucrop:2.2.2-native'
-
     //PopupWindow (https://github.com/razerdp/BasePopup)
     implementation 'com.github.razerdp:BasePopup:2.1.9'
 
     //视频播放库（https://github.com/CarGuo/GSYVideoPlayer）
-    implementation 'com.shuyu:GSYVideoPlayer:6.0.3'
+    implementation 'com.shuyu:GSYVideoPlayer:7.0.1'
 
     //Android图片轮播控件（https://github.com/wenchaosong/Banner）
-    implementation 'com.github.wenchaosong:Banner:2.3.1'
+    implementation 'com.github.wenchaosong:Banner:2.3.9'
 
     //选择器控件（https://github.com/Bigkoo/Android-PickerView）
     implementation 'com.contrarywind:Android-PickerView:4.1.6'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

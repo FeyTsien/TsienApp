@@ -16,7 +16,7 @@ import com.tsien.ui.adapter.MyPagerAdapter;
 import com.tsien.ui.adapter.RecyclerViewAdapter;
 import com.tsienlibrary.bean.CommonBean;
 import com.tsienlibrary.eventbus.Event;
-import com.tsienlibrary.eventbus.EventCode;
+import com.tsien.eventbus.EventCode;
 import com.tsienlibrary.ui.widget.CustomViewPager;
 
 import java.util.ArrayList;

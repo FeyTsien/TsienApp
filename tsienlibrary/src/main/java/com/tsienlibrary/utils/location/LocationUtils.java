@@ -1,6 +1,5 @@
 package com.tsienlibrary.utils.location;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -13,7 +12,7 @@ import android.util.Log;
 import androidx.core.app.ActivityCompat;
 
 /**
- * Created by MoLin on 16/9/25.
+ *
  */
 public class LocationUtils {
 
