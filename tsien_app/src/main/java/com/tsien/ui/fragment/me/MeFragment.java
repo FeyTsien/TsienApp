@@ -42,7 +42,6 @@ public class MeFragment extends MVPFragment<MVPContract.View, MVPPresenter> impl
         OnChartValueSelectedListener {
     List<Entry> mValues1 = new ArrayList<>();
     List<Entry> mValues2 = new ArrayList<>();
-    List<Entry> mValues3 = new ArrayList<>();
 
     @BindView(R.id.chart1)
     LineChart chart;
@@ -59,100 +58,50 @@ public class MeFragment extends MVPFragment<MVPContract.View, MVPPresenter> impl
 
     @Override
     protected void initData() {
+//
+//        mValues1.add(new Entry(0, 10));
+//        mValues1.add(new Entry(1, 15));
+//        mValues1.add(new Entry(2, 25));
+//        mValues1.add(new Entry(3, 19));
+//        mValues1.add(new Entry(4, 25));
 
-        mValues1.add(new Entry(0, 10, "2019-01"));
-        mValues1.add(new Entry(1, 15, ""));
-        mValues1.add(new Entry(2, 25, ""));
-        mValues1.add(new Entry(3, 19, ""));
-        mValues1.add(new Entry(4, 25, "2019-05"));
-        mValues1.add(new Entry(5, 16, ""));
-        mValues1.add(new Entry(6, 40, ""));
-        mValues1.add(new Entry(7, 24, ""));
-        mValues1.add(new Entry(8, 27, "2019-09"));
+        mValues1.add(new Entry(0, 1045, "2019-01"));
+        mValues1.add(new Entry(1, 1563, "2019-02"));
+        mValues1.add(new Entry(2, 4525, "2019-03"));
+        mValues1.add(new Entry(3, 7819, "2019-04"));
+        mValues1.add(new Entry(4, 4225, "2019-05"));
+//        mValues1.add(new Entry(5, 16, "2019-06"));
+//        mValues1.add(new Entry(6, 40, "2019-07"));
+//        mValues1.add(new Entry(7, 24, "2019-08"));
+//        mValues1.add(new Entry(8, 27, "2019-09"));
+//        mValues1.add(new Entry(9, 24, "2019-10"));
+//        mValues1.add(new Entry(10, 27, "2019-11"));
+//        mValues1.add(new Entry(11, 27, "2019-12"));
 
-        mValues2.add(new Entry(0, 50));
-        mValues2.add(new Entry(1, 65));
-        mValues2.add(new Entry(2, 75));
-        mValues2.add(new Entry(3, 59));
-        mValues2.add(new Entry(4, 45));
-        mValues2.add(new Entry(5, 66));
-        mValues2.add(new Entry(6, 30));
-        mValues2.add(new Entry(7, 64));
-        mValues2.add(new Entry(8, 97));
+        mValues2.add(new Entry(0, 5450));
+        mValues2.add(new Entry(1, 3565));
+        mValues2.add(new Entry(2, 5575));
+        mValues2.add(new Entry(3, 8859));
+        mValues2.add(new Entry(4, 2345));
+//        mValues2.add(new Entry(5, 66));
+//        mValues2.add(new Entry(6, 30));
+//        mValues2.add(new Entry(7, 64));
+//        mValues2.add(new Entry(8, 97));
+//        mValues2.add(new Entry(9, 64));
+//        mValues2.add(new Entry(10, 97));
+//        mValues2.add(new Entry(11, 64));
     }
 
     @Override
     protected void initView() {
         initLineChart();
-        chart.animateX(1500);
-        // get the legend (only possible after setting data)
-        Legend legend = chart.getLegend();
-
-        // 设置图例
-        legend.setForm(Legend.LegendForm.LINE);
-//        legend.setTypeface(tfLight);
-        legend.setTextSize(11f);
-        legend.setTextColor(Color.BLACK);
-        legend.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
-        legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
-        legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
-        legend.setDrawInside(false);
-//        legend.setYOffset(11f);
-
-        //X轴设置
-        XAxis xAxis = chart.getXAxis();
-//        xAxis.setTypeface(tfLight);//设置字体样式
-        xAxis.setTextSize(11f);//X轴字体大小
-        xAxis.setTextColor(Color.BLACK);//字体颜色
-//        xAxis.setAxisMinimum(0f);//设置x轴的最小值 //`
-//        xAxis.setAxisMaximum(31f);//设置最大值 //
-//        xAxis.setLabelCount(10);  //设置X轴的显示个数
-        xAxis.setAxisLineColor(Color.BLACK);//设置X轴线颜色
-        xAxis.setAxisLineWidth(0.5f);//设置x轴线宽度
-        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);//X轴显示位置
-        xAxis.setDrawAxisLine(true);//是否绘制轴线
-        xAxis.setDrawGridLines(false);//设置x轴上每个点对应的线
-        xAxis.setDrawLabels(true);//绘制标签  指x轴上的对应数值
-        xAxis.setAvoidFirstLastClipping(false);//图表将避免第一个和最后一个标签条目被减掉在图表或屏幕的边缘
-        xAxis.setValueFormatter(new ValueFormatter() {
-            @Override
-            public String getFormattedValue(float value) {
-                return mValues1.get((int) value).getData() + "";
-            }
-        });
-
-        //Y轴设置(左侧)
-        YAxis leftAxis = chart.getAxisLeft();
-//        leftAxis.setTypeface(tfLight);
-        leftAxis.setTextColor(ColorTemplate.getHoloBlue());
-        leftAxis.setAxisMaximum(200f);
-        leftAxis.setAxisMinimum(0f);
-        leftAxis.setDrawGridLines(true);
-        leftAxis.setGranularityEnabled(true);
-//
-//        leftAxis.setValueFormatter(new IAxisValueFormatter() {
-//                                       @Override
-//                                       public String getFormattedValue(float value, AxisBase axis) {
-//                                           return "￥"+ value;
-//                                       }
-
-
-//
-//        //Y轴设置(右侧)
-//        YAxis rightAxis = chart.getAxisRight();
-////        rightAxis.setTypeface(tfLight);
-//        rightAxis.setTextColor(Color.RED);
-//        rightAxis.setAxisMaximum(900);
-//        rightAxis.setAxisMinimum(-200);
-//        rightAxis.setDrawGridLines(false);
-//        rightAxis.setDrawZeroLine(false);
-//        rightAxis.setGranularityEnabled(false);
     }
 
     /**
      * 刷新用户信息
      */
     private void setUserInfo() {
+
     }
 
     @Override
@@ -211,6 +160,69 @@ public class MeFragment extends MVPFragment<MVPContract.View, MVPPresenter> impl
         //设置整体控件背景颜色
         chart.setBackgroundColor(Color.WHITE);
 
+        chart.animateX(1500);
+        // get the legend (only possible after setting data)
+        Legend legend = chart.getLegend();
+
+        // 设置图例
+        legend.setForm(Legend.LegendForm.LINE);
+//        legend.setTypeface(tfLight);
+        legend.setTextSize(11f);
+        legend.setTextColor(Color.BLACK);
+        legend.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
+        legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
+        legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+        legend.setDrawInside(false);
+//        legend.setYOffset(11f);
+
+        //X轴设置
+        XAxis xAxis = chart.getXAxis();
+//        xAxis.setTypeface(tfLight);//设置字体样式
+        xAxis.setTextSize(11f);//X轴字体大小
+        xAxis.setTextColor(Color.BLACK);//字体颜色
+//        xAxis.setAxisMinimum(0f);//设置x轴的最小值 //`
+//        xAxis.setAxisMaximum(12f);//设置X最大值 //
+        xAxis.setLabelCount(4);  //设置X轴的显示个数
+        xAxis.setAxisLineColor(Color.BLACK);//设置X轴线颜色
+        xAxis.setAxisLineWidth(0.5f);//设置x轴线宽度
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);//X轴显示位置
+        xAxis.setDrawAxisLine(true);//是否绘制轴线
+        xAxis.setDrawGridLines(false);//设置x轴上每个点对应的线
+        xAxis.setDrawLabels(true);//绘制标签  指x轴上的对应数值
+        xAxis.setAvoidFirstLastClipping(false);//图表将避免第一个和最后一个标签条目被减掉在图表或屏幕的边缘
+        xAxis.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value) {
+                return mValues1.get((int) value).getData() + "";
+            }
+        });
+
+        //Y轴设置(左侧)
+        YAxis leftAxis = chart.getAxisLeft();
+//        leftAxis.setTypeface(tfLight);
+        leftAxis.setTextColor(ColorTemplate.getHoloBlue());
+//        leftAxis.setAxisMaximum(200f);//Y轴最大值
+        leftAxis.setAxisMinimum(0f);
+        leftAxis.setDrawGridLines(true);
+        leftAxis.setGranularityEnabled(true);
+//
+//        leftAxis.setValueFormatter(new IAxisValueFormatter() {
+//                                       @Override
+//                                       public String getFormattedValue(float value, AxisBase axis) {
+//                                           return "￥"+ value;
+//                                       }
+
+
+//
+//        //Y轴设置(右侧)
+//        YAxis rightAxis = chart.getAxisRight();
+////        rightAxis.setTypeface(tfLight);
+//        rightAxis.setTextColor(Color.RED);
+//        rightAxis.setAxisMaximum(900);
+//        rightAxis.setAxisMinimum(-200);
+//        rightAxis.setDrawGridLines(false);
+//        rightAxis.setDrawZeroLine(false);
+//        rightAxis.setGranularityEnabled(false);
         setData();
     }
 
